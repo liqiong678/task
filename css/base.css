@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/*公共类*/
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+/*各浏览器显示不同，去掉蓝色边框*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+/*去掉行内替换元素空白缝隙*/
+select, input {
+    vertical-align: middle;
+}
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/*防止拖动 影响布局*/
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*宋体 unicode */
+    color: #666;
+    background: #fff;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*京东色*/
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+/*头部的开始*/
+.top{
+    width: 100%;
+    background-color: #f1f1f1;
+    /*height: 30px;*/
+    line-height: 30px;
+}
+.top .dropdown{
+    position: relative;
+    padding-right: 25px;
+}
+.dropdown s{
+    font: 400 15px/15px consolas; /*合写font: 加粗 字号/行高 字体*/
+    color: #6A6A6A;
+    position: absolute;
+    top: -7px;
+    left: 0;
+}
+.dropdown i {
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    width: 15px;
+    height: 9px;
+    overflow: hidden;
+}
+.top li{
+    float: left;
+
+   padding: 0 10px;
+}
+.top .fr .space{
+    width: 1px;
+    height: 12px;
+    background-color:#DDDDDD;
+    padding: 0;
+    margin-top: 9px;
+}
+.top .fr .tel-li{
+    padding-left: 27px;
+    position: relative;
+}
+.top .fr .tel-icon{
+    background: url("../images/tel_icon.png") no-repeat 0 0;
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    left: 6px;
+    top: 5px;
+}
+/*顶部广告栏start*/
+.topbanner {
+    background-color: #8A25C6;
+
+}
+.topbanner .w{
+    position: relative;
+}
+.topbanner .close_banner{
+    width: 19px;
+    height: 19px;
+    background: url("../images/close.png") no-repeat 0px 0px;
+    /*background-color: red;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.topbanner .close_banner:hover{
+    background: url("../images/close.png") no-repeat 0px -19px;
+}
+/*header部分的开始*/
+.header{
+    height: 100px;
+    /*background-color: red;*/
+}
+.header .logo{
+    width: 362px;
+    height: 60px;
+    /*background-color: pink;*/
+    float: left;
+    position: relative;
+    padding: 20px 0;
+
+}
+/*a标签设置宽高需要变为块级*/
+.logo a{
+    width: 270px;
+    height: 60px;
+    background: url("../images/logo-201305.png") no-repeat;
+    display: block;
+    text-indent: -99999px;
+}
+.logo .ad11{
+    position: absolute;
+    top: 10px;
+    left: 170px;
+}
+.header .search{
+    width: 538px;
+    /*height: 61px;*/
+    /*background-color: blue;*/
+    float: left;
+    margin-top: 25px;
+}
+.search input{
+    width: 450px;
+    height: 32px;
+    border: 2px solid #b61D1D;
+    color:rgb(153,153,153);
+    font:400 14px/32px "microsoft yahei";
+    padding-left: 4px;
+    float: left;
+}
+.search button{
+    width: 80px;
+    height: 36px;
+    color:#fff;
+    font: 400 16px/36px "microsoft yahei";
+    float: left;
+    background-color: #B61D1D;
+    cursor: pointer;
+
+}
+ .header .car{
+    width: 96px;
+     float: right;
+     margin: 25px 65px 0 0;
+     border: 1px solid #DFDFDF;
+     background-color: #F9F9F9;
+     height: 34px;
+     line-height: 34px;
+     padding-left: 43px;
+     position: relative;
+ }
+ .header .icon1{
+     /*background-color: red;*/
+     width: 16px;
+     height: 13px;
+     position: absolute;
+     top: 10px;
+     left: 19px;
+     background: url("../images/tel_icon.png") no-repeat -1px -59px;
+ }
+.header .icon2{
+    font: 400 13px/13px simsun;
+    color: #999;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+}
+.header .icon3{
+    /*width: 16px;*/
+    height: 14px;
+    background-color: #c81623;
+    font: 400 12px/14px Arial, Verdana, "\5b8b\4f53";
+    border-radius: 7px 7px 7px 0;
+    min-width: 12px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: -4px;
+    left: 104px;
+
+}
+.header .hotwords{
+    /*width: 465px;*/
+    height: 25px;
+    /*background-color: deeppink;*/
+    float: left;
+    margin-top: 8px;
+}
+.hotwords a{
+    margin-right: 10px;
+    /*float: left;*/
+}
+/*底部的开始*/
+.footer {
+    height: 491px;
+    margin-top: 5px;
+    /*background-color: pink;*/
+    position: relative;
+    /*overflow: hidden;*/
+
+}
+.footer .service{
+    height: 296px;
+    /*background-color: deepskyblue;*/
+    /*overflow: hidden;*/
+}
+/*slogan的开始*/
+.footer .service .slogan{
+    height: 94px;
+    width: 100%;
+    /*background-color: red;*/
+    position: relative;
+    background-color:#F5F5F5;
+}
+.footer>.service>div span{
+    position:absolute ;
+    top: 0;
+    left: 50%;
+}
+/*调整每个span的位置maigin-left-回到自己的位置*/
+.footer .service span:nth-child(1){
+    margin-left: -604px;
+}
+.footer .service span:nth-child(2){
+    margin-left: -304px;
+}
+.footer .service span:nth-child(4){
+    margin-left: 304px;
+}
+
+/*info的开始*/
+.info dl{
+    float: left;
+    /*写死了所以要减25*/
+    height: 175px;
+    width: 199px;
+    margin-top: 25px;
+}
+.info .last{
+    width: 100px;
+}
+.info dl dt{
+    /*文字样式的设置*/
+    font: 400 16px/24px "microsoft yahei";
+    margin-bottom: 10px;
+}
+.info dl dd{
+    color: #666;
+    font: 400 12px/20px "simsu";
+
+}
+.info .coverage{
+    /*background-color: rebeccapurple;*/
+    width: 250px;
+    float: right;
+    height: 201px;
+    background: url("../images/china.png") no-repeat 0 -120px;
+}
+.coverage>dl>dt{
+    margin-left: 20px;
+}
+.coverage>dl dd.pos{
+    margin-left: 20px;
+}
+
+
+.footer .service .info{
+    height: 202px;
+    /*background-color: lightgreen;*/
+
+}
+.footer .bottom{
+    height: 194px;
+    /*background-color: yellow;*/
+    text-align: center;
+    margin-top: 20px;
+}
+/*底部的开始*/
+.footer .links a{
+    margin: 0 10px;
+}
+.footer .copyright{
+    margin-top: 15px;
+}
+.footer .authentication{
+    margin-top: 30px;
+
+}
+.authentication a{
+    margin-right: 10px;
+
+}
